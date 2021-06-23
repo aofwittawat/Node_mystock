@@ -1,5 +1,13 @@
 const accountService = require("../services/account.service");
 
+/**
+ *
+ * @swagger
+ * /account/register:
+ *    post:
+ *      summary: Create a new account
+ *      tags: [Account]
+ */
 exports.register = async (req, res) =>
   res.status(201).json(await accountService.register(req.body));
 
@@ -14,3 +22,10 @@ exports.login = async (req, res) => {
 };
 
 exports.info = (req, res) => res.json({ username: req.sub, role: req.role });
+
+/**
+ * @swagger
+ * tags:
+ *    name: Account
+ *    description: Account management API
+ */
