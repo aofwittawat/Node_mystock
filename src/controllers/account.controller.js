@@ -12,3 +12,5 @@ exports.login = async (req, res) => {
   }
   res.json({ token });
 };
+
+exports.info = (req, res) => res.json({ username: req.sub, role: req.role });
