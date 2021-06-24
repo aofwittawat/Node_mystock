@@ -1,6 +1,6 @@
 
 @base_url = http://localhost
-@port = 1111
+@port = 3000
 @url = {{base_url}}:{{port}}
 @product_api = {{url}}/products
 @account_api = {{url}}/account
